@@ -6,21 +6,19 @@
     android:orientation="vertical">
 
     <!-- 타이틀바 -->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:id="@+id/colorBar"
             android:layout_width="match_parent"
             android:layout_height="53dp"
-            android:fontFamily="@font/custom_font_family"
+            android:fontFamily="@font/acarracer"
             android:gravity="center"
-            android:text="알림!"
+            android:text="SIG HOME 알림"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="30sp" />
     </LinearLayout>
     <!-- //end 타이틀바 -->
 
@@ -37,12 +35,12 @@
 
         <TextView
             android:id="@+id/noticeText"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
-            android:alpha="0.87"
             android:gravity="center"
-            android:textColor="#000"
+            android:textColor="@color/black"
             android:textSize="17sp" />
     </LinearLayout>
 
@@ -56,15 +54,11 @@
             android:id="@+id/checkButton"
             android:layout_width="0dp"
             android:layout_height="50dp"
-
             android:layout_weight="10"
-            android:background="@drawable/button1"
+            android:background="@color/alarm_on_mode"
             android:fontFamily="@font/custom_font_family"
-            android:shadowColor="#75FAFF"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
             android:text="확인"
+            android:textStyle="bold"
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -73,13 +67,10 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="10"
-            android:background="@drawable/button2"
+            android:background="@color/alarm_off_mode"
             android:fontFamily="@font/custom_font_family"
-            android:shadowColor="#FAFFFE"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
             android:text="닫기"
+            android:textStyle="bold"
             android:textColor="#000000"
             android:textSize="20sp" />
     </LinearLayout>
