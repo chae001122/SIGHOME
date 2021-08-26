@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#F3F3F3</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#4C4C4C</color>
+
+    <!--App Theme Color-->
+    <color name="main_blue">#0070C0</color>
+
+
+    <!--앱 설명 화면 색상-->
+    <color name="explain">#7DC880</color>
+
+    <!--알람 (해제) 색상 -->
+    <color name="alarm_on_mode">#BDD7EE</color>
+    <color name="alarm_off_mode">#787878</color>
+
+    <color name="turn_off_btn">#FFC738</color>
+
+    <!--상활 별 색상-->
+    <color name="emergency">#FF4E4E</color> <!--침입자 발생시-->
+    <color name="ring_bell">#FFD99B</color> <!--벨 누를시-->
+    <color name="swaying_window">#66CCFF</color> <!--창문 흔들릴 시-->
+
+</resources>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/explain">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.6"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="center"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.8"
+                android:text="상황별 전등색 설명서"
+                android:fontFamily="@font/asiahead1"
+                android:textSize="22sp"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/acarracer"
+        android:gravity="center"
+        android:text="SIG HOME"
+        android:textColor="@color/black"
+        android:textSize="50sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:id="@+id/username_tv"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:fontFamily="@font/asiahead1"
+            android:gravity="center"
+            android:text="아이콘을 클릭해 보세요."
+            android:textColor="@color/explain"
+            android:textSize="20sp" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/fire_demode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fire_1"
+                android:clickable="true"
+                android:visibility="visible" />
+        </LinearLayout>
+        <Space
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.4"
+            android:fontFamily="@font/custom_font_family"
+            android:gravity="left|center_vertical"
+            android:text="화재가 감지 되었을 땐 빨간색"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/bell_demode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bell_1"
+                android:clickable="true"
+                android:visibility="visible" />
+        </LinearLayout>
+        <Space
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.4"
+            android:fontFamily="@font/custom_font_family"
+            android:gravity="left|center_vertical"
+            android:text="초인종이 눌렸을 땐 노란색"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/enter_demode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/enter_1"
+                android:clickable="true"
+                android:visibility="visible" />
+        </LinearLayout>
+        <Space
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.4"
+            android:fontFamily="@font/custom_font_family"
+            android:gravity="left|center_vertical"
+            android:text="침입자가 감지 되었을 땐 초록색"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/window_demode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/window_1"
+                android:clickable="true"
+                android:visibility="visible" />
+        </LinearLayout>
+        <Space
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.4"
+            android:fontFamily="@font/custom_font_family"
+            android:gravity="left|center_vertical"
+            android:text="창문이 흔들렸을 땐 파란색"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/garage_demode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/garage_1"
+                android:clickable="true"
+                android:visibility="visible" />
+        </LinearLayout>
+        <Space
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.4"
+            android:fontFamily="@font/custom_font_family"
+            android:gravity="left|center_vertical"
+            android:text="차량이 도난되었을 땐 백색"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

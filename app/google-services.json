@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1036214429363",
+    "firebase_url": "https://sighome-default-rtdb.firebaseio.com",
+    "project_id": "sighome",
+    "storage_bucket": "sighome.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036214429363:android:cfbb67c8f1fd4c0e2bf2c6",
+        "android_client_info": {
+          "package_name": "com.example.sighome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036214429363-e1pmfve2l1en65fsseaqnpi2kj10pib1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeVKuFTKZRNm2AOrHZIOs4R_RDBOFU1Ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036214429363-e1pmfve2l1en65fsseaqnpi2kj10pib1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036214429363:android:75171dc8089bc1f52bf2c6",
+        "android_client_info": {
+          "package_name": "com.example.sighome_v00"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036214429363-e1pmfve2l1en65fsseaqnpi2kj10pib1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeVKuFTKZRNm2AOrHZIOs4R_RDBOFU1Ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036214429363-e1pmfve2l1en65fsseaqnpi2kj10pib1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

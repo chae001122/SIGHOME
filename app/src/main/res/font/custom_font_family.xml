@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <font
+        android:font="@font/alight"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/alight"
+        app:fontStyle="normal"
+        app:fontWeight="500"/>
+
+    <font
+        android:font="@font/acarracer"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/acarracer"
+        app:fontStyle="normal"
+        app:fontWeight="500"/>
+
+    <font
+        android:font="@font/asiahead1"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/asiahead1"
+        app:fontStyle="normal"
+        app:fontWeight="500"/>
+
+</font-family>

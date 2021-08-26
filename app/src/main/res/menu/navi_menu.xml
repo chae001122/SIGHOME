@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inside_mode"
+            android:icon="@drawable/alarm_on_mode"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="알람 설정 모드" />
+        <item
+            android:id="@+id/outside_mode"
+            android:icon="@drawable/alarm_off_mode"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="알람 해제 모드" />
+        <item
+            android:id="@+id/app_intro"
+            android:icon="@drawable/ic_app_intro"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="앱 사용 방법" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="로그아웃" />
+    </group>
+</menu>
