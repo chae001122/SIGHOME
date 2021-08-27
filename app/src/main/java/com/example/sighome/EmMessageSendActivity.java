@@ -22,33 +22,11 @@ import org.w3c.dom.Text;
 
 public class EmMessageSendActivity extends Activity {
 
-    static final int SMS_SEND_PERMISSION=1001;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_emmessagesend);
-
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)!=PackageManager.PERMISSION_GRANTED){
-            if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.SEND_SMS)){
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("알림");
-                builder.setMessage("SMS 권한을 부여하지 않으면 이 앱이 제대로 작동하지 않습니다.");
-                builder.setIcon(android.R.drawable.ic_dialog_info);
-
-                builder.setNeutralButton("허가", new DialogInterface.OnClickListener(){
-                    @Override
-                    public void onClick(DialogInterface dialog, int which){
-                        ActivityCompat.requestPermissions(EmMessageSendActivity.this, new String[] {Manifest.permission.SEND_SMS}, SMS_SEND_PERMISSION);
-                    }
-                });
-                AlertDialog dialog = builder.create();
-                dialog.show();
-            }else {
-                ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.SEND_SMS}, SMS_SEND_PERMISSION);
-            }
-        }
 
         TextView btn112 = findViewById(R.id.send_to_112_btn);
         TextView btn119 = findViewById(R.id.send_to_119_btn);
@@ -96,19 +74,6 @@ public class EmMessageSendActivity extends Activity {
                 finish();
             }
         });
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults){
-        switch(requestCode){
-            case SMS_SEND_PERMISSION: {
-                if(grantResults.length>0 &&grantResults[0]==PackageManager.PERMISSION_GRANTED){
-                    Toast.makeText(this,"Permission granted.", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(this,"Permission denied.", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }
     }
 
     @Override
