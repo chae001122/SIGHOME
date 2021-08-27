@@ -29,13 +29,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/alarm_on_mode"
         android:orientation="vertical"
         android:padding="24dp">
 
         <TextView
             android:id="@+id/noticeText"
-            android:background="@color/white"
+            android:background="@color/alarm_on_mode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
@@ -55,7 +55,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="10"
-            android:background="@color/alarm_on_mode"
+            android:background="@color/turn_off_btn"
             android:fontFamily="@font/custom_font_family"
             android:text="확인"
             android:textStyle="bold"

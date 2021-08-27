@@ -38,7 +38,6 @@ public class Register1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_register1);
 
         mFirebaseAuth=FirebaseAuth.getInstance();
-        mUser=mFirebaseAuth.getCurrentUser();
         mDatabaseRef= FirebaseDatabase.getInstance().getReference("SIGHOME");
 
         mEtUserName = findViewById(R.id.regist_username_et);
@@ -72,16 +71,16 @@ public class Register1Activity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {//가입 성공시
-                                FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
+                                mUser=mFirebaseAuth.getCurrentUser();
                                 UserAccount account = new UserAccount();
 
                                 account.setUserName(strUserName);
-                                account.setIdToken(firebaseUser.getUid());
-                                account.setEmailId(firebaseUser.getEmail());
+                                account.setIdToken(mUser.getUid());
+                                account.setEmailId(mUser.getEmail());
                                 account.setPassword(strPwd);
 
                                 //setValue : database에 insert (삽입) 행위
-                                mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
+                                mDatabaseRef.child("UserAccount").child(mUser.getUid()).setValue(account);
 
                                 mUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override

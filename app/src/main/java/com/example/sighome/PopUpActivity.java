@@ -64,7 +64,6 @@ public class PopUpActivity extends Activity {
             Log.i("bell","ringing bell");
         }
         notice.setText(notice_data);
-        notice.setBackgroundResource(R.color.alarm_on_mode);
         Log.i("notice",notice_data);
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override

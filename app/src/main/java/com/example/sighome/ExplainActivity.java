@@ -24,8 +24,8 @@ public class ExplainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_explain);
 
         ImageButton fireBtn = findViewById(R.id.fire_demode);
-        ImageButton doorBtn = findViewById(R.id.bell_demode);
-        ImageButton bellBtn = findViewById(R.id.enter_demode);
+        ImageButton doorBtn = findViewById(R.id.enter_demode);
+        ImageButton bellBtn = findViewById(R.id.bell_demode);
         ImageButton windowBtn = findViewById(R.id.window_demode);
         ImageButton garageBtn = findViewById(R.id.garage_demode);
 
