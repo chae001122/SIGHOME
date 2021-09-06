@@ -42,7 +42,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.5"/>
+            android:layout_weight="0.5"/>
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
@@ -96,13 +96,13 @@
                 android:layout_weight="1"/>
 
             <TextView
-                android:id="@+id/turnOff_btn"
+                android:id="@+id/watch_cctv_btn"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="4"
-                android:text="전등 끄기"
-                android:textSize="30sp"
-                android:background="@drawable/turn_off_btn"
+                android:text="CCTV 확인"
+                android:textSize="25sp"
+                android:background="@drawable/round_square_3"
                 android:textColor="@color/black"
                 android:fontFamily="@font/acarracer"
                 android:gravity="center"
@@ -128,18 +128,49 @@
                 android:layout_weight="1"/>
 
             <TextView
+                android:id="@+id/turnOff_btn"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:text="LED 전원 끄기"
+                android:textSize="25sp"
+                android:background="@drawable/turn_off_btn"
+                android:textColor="@color/black"
+                android:fontFamily="@font/acarracer"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|center_horizontal"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"/>
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <TextView
                 android:id="@+id/em_call_btn"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="4"
-                android:text="긴급 신고"
-                android:textSize="30sp"
+                android:text="긴급 신고 버튼"
+                android:textSize="25sp"
                 android:background="@drawable/emergency_btn"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:fontFamily="@font/acarracer"
                 android:gravity="center"
                 android:layout_gravity="center_vertical|center_horizontal"/>
-
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -203,7 +234,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.5"/>
+            android:layout_weight="0.5"/>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
