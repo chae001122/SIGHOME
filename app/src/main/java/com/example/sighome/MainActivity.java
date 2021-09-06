@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTvUserName, turnOffBtn, emCallBtn;
     private ImageView modeIv;
 
+    private TextView cctvBtn;
+
     private DrawerLayout mDrawerLayout;
     private Context context = this;
     private Activity activity = this;
@@ -70,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
         turnOffBtn=findViewById(R.id.turnOff_btn);
         modeIv=findViewById(R.id.mode_iv);
+
+        cctvBtn = findViewById(R.id.watch_cctv_btn);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -152,6 +158,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),AlarmService.class);
                 intent.setAction(ACTION_KEEPALIVE);
                 startService(intent);
+            }
+        });
+
+
+        cctvBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(DEBUG_TAG,"티비 보자");
+                Intent intent = new Intent(getApplicationContext(),CCTV.class);
+                startActivity(intent);
             }
         });
 
