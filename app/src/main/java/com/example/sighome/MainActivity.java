@@ -12,8 +12,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -166,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(DEBUG_TAG,"티비 보자");
-                Intent intent = new Intent(getApplicationContext(),CCTV.class);
+                Intent intent = new Intent(getApplicationContext(), Cctv.class);
                 startActivity(intent);
             }
         });

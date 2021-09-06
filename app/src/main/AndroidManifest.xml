@@ -18,7 +18,7 @@
         android:theme="@style/Theme.SIGHOME"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".CCTV"
+            android:name=".Cctv"
             android:exported="true" />
         <activity
             android:name=".CCTVActivity2"

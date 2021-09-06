@@ -3,11 +3,13 @@ package com.example.sighome;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 
-public class CCTV extends AppCompatActivity {
+public class Cctv extends AppCompatActivity {
 
     private WebView mWebView; // 웹뷰 선언
     private WebSettings mWebSettings; //웹뷰세팅
@@ -33,5 +35,14 @@ public class CCTV extends AppCompatActivity {
         mWebSettings.setDomStorageEnabled(true); // 로컬저장소 허용 여부
 
         mWebView.loadUrl("http://111.118.51.164:8090/?action=stream"); // 웹뷰에 표시할 라즈베리파이 주소, 웹뷰 시작
+
+
+        Button cancelBtn = findViewById(R.id.cancel_btn);
+        cancelBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                finish();
+            }
+        });
     }
 }

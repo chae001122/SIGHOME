@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ASProject/SIGHOME/app/src/main/res/layout/activity_cctv.xml" value="0.2" />
+        <entry key="..\:/ASProject/SIGHOME/app/src/main/res/layout/activity_emmessagesend.xml" value="0.17844202898550723" />
+        <entry key="..\:/ASProject/SIGHOME/app/src/main/res/layout/activity_explain.xml" value="0.1721014492753623" />
+        <entry key="..\:/ASProject/SIGHOME/app/src/main/res/layout/activity_main.xml" value="0.15760869565217392" />
         <entry key="..\:/Users/ata97/Desktop/SIGHOME_0.1v/app/src/main/res/layout/activity_cctv.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/ata97/Desktop/SIGHOME_0.1v/app/src/main/res/layout/activity_main.xml" value="0.22" />
       </map>

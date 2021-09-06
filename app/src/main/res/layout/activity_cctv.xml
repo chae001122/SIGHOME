@@ -5,12 +5,53 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context=".CCTV">
+    tools:context=".Cctv">
 
-    <Space
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1.2"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="@color/alarm_on_mode"
+            android:orientation="horizontal">
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"/>
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cancel_btn"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="5dp"/>
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:text="실시간 모니터링 CCTV 화면"
+            android:textStyle="bold"
+            android:fontFamily="@font/asiahead1"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1" />
+    </LinearLayout>
 
     <WebView
         android:id="@+id/watch_cctv"
@@ -25,9 +66,48 @@
         android:textColor="@color/black"
         android:textSize="25sp" />
 
-    <Space
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="청각 장애인을 위한 스마트 홈 케어 시스템"
+                android:textSize="15sp"
+                android:fontFamily="@font/asiahead1"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="SIG HOME"
+                android:textSize="40sp"
+                android:fontFamily="@font/acarracer"
+                android:gravity="center"
+                android:textColor="@color/main_blue"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@color/alarm_on_mode"/>
+    </LinearLayout>
 
 </LinearLayout>
