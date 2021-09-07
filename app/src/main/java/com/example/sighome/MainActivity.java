@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(DEBUG_TAG,"티비 보자");
-                Intent intent = new Intent(getApplicationContext(), Cctv.class);
+                Intent intent = new Intent(getApplicationContext(), CctvPopUpActivity.class);
                 startActivity(intent);
             }
         });

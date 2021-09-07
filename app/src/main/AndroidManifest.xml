@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_sighome"
@@ -18,13 +19,13 @@
         android:theme="@style/Theme.SIGHOME"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".CctvPopUpActivity"
+            android:excludeFromRecents="true"
+            android:taskAffinity=".popup"
+            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
+        <activity
             android:name=".Cctv"
             android:exported="true" />
-        <activity
-            android:name=".CCTVActivity2"
-            android:exported="true"
-            android:label="@string/title_activity_cctvactivity2"
-            android:theme="@style/Theme.SIGHOME.NoActionBar" />
         <activity
             android:name=".PopUpActivity"
             android:excludeFromRecents="true"
