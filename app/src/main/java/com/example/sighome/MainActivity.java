@@ -78,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Intent intent = new Intent(getApplicationContext(),AlarmService.class);
-        intent.setAction(ACTION_START);
-        startService(intent);
+        //intent.setAction(ACTION_START);
+       //startService(intent);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);

@@ -19,6 +19,9 @@
         android:theme="@style/Theme.SIGHOME"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Cctv_outdoorActivity"
+            android:exported="true" />
+        <activity
             android:name=".CctvPopUpActivity"
             android:excludeFromRecents="true"
             android:taskAffinity=".popup"

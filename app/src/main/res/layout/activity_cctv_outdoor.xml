@@ -23,7 +23,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="10"/>
             <Button
-                android:id="@+id/cancel_btn"
+                android:id="@+id/cancel_btn_out"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -43,7 +43,7 @@
             android:layout_weight="0.7"
             android:fontFamily="@font/asiahead1"
             android:gravity="center"
-            android:text="내부 CCTV 화면"
+            android:text="외부 CCTV 화면"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -54,7 +54,7 @@
     </LinearLayout>
 
     <WebView
-        android:id="@+id/watch_cctv"
+        android:id="@+id/watch_cctv_out"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center_vertical|center_horizontal"

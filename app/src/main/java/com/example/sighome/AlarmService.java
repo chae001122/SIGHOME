@@ -72,8 +72,7 @@ public class AlarmService extends Service implements MqttCallback
     private static final String DEVICE_ID_FORMAT = "andr_%s"; // Device ID Format, add any prefix you'd like
 
     private static boolean nonAalarm = false;
-    // Note: There is a 23 character limit you will get
-    // An NPE if you go over that limit
+
     private boolean mStarted = false;   // Is the Client started?
     private String mDeviceId;       // Device ID, Secure.ANDROID_ID
     private Handler mConnHandler;     // Seperate Handler thread for networking
@@ -91,42 +90,25 @@ public class AlarmService extends Service implements MqttCallback
 
 
 
-    /**
-     * Start MQTT Client
-     //* @param Context context to start the service with
-     * @return void
-     */
+
     public static void actionStart(Context ctx) {
         Intent i = new Intent(ctx, MqttService.class);
         i.setAction(ACTION_START);
         ctx.startService(i);
     }
-    /**
-     * Stop MQTT Client
-     //* @param Context context to start the service with
-     * @return void
-     */
+
     public static void actionStop(Context ctx) {
         Intent i = new Intent(ctx,MqttService.class);
         i.setAction(ACTION_STOP);
         ctx.startService(i);
     }
-    /**
-     * Send a KeepAlive Message
-   //  * @param Context context to start the service with
-     * @return void
-     */
+
     public static void actionKeepalive(Context ctx) {
         Intent i = new Intent(ctx,MqttService.class);
         i.setAction(ACTION_KEEPALIVE);
         ctx.startService(i);
     }
 
-    /**
-     * Initalizes the DeviceId and most instance variables
-     * Including the Connection Handler, Datastore, Alarm Manager
-     * and ConnectivityManager.
-     */
     @Override
     public void onCreate() {
         super.onCreate();
@@ -149,12 +131,6 @@ public class AlarmService extends Service implements MqttCallback
         mConnectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
     }
 
-    /**
-     * Service onStartCommand
-     * Handles the action passed via the Intent
-     *
-     * @return START_REDELIVER_INTENT
-     */
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
@@ -203,11 +179,7 @@ public class AlarmService extends Service implements MqttCallback
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 
-    /**
-     * Attempts connect to the Mqtt Broker
-     * and listen for Connectivity changes
-     * via ConnectivityManager.CONNECTVITIY_ACTION BroadcastReceiver
-     */
+
     private synchronized void start() {
         if(mStarted) {
             Log.i(DEBUG_TAG,"Attempt to start while already started");
@@ -222,11 +194,7 @@ public class AlarmService extends Service implements MqttCallback
 
         registerReceiver(mConnectivityReceiver,new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
     }
-    /**
-     * Attempts to stop the Mqtt client
-     * as well as halting all keep alive messages queued
-     * in the alarm manager
-     */
+
     private synchronized void stop() {
         if(!mStarted) {
             Log.i(DEBUG_TAG,"Attemtpign to stop connection that isn't running");
@@ -252,9 +220,7 @@ public class AlarmService extends Service implements MqttCallback
 
         unregisterReceiver(mConnectivityReceiver);
     }
-    /**
-     * Connects to the broker with the appropriate datastore
-     */
+
     private synchronized void connect() {
         String url = String.format("tcp://111.118.51.164:1883");
         Log.i(DEBUG_TAG,"Connecting with URL: " + url);
@@ -295,10 +261,7 @@ public class AlarmService extends Service implements MqttCallback
             }
         });
     }
-    /**
-     * Schedules keep alives via a PendingIntent
-     * in the Alarm Manager
-     */
+
     private void startKeepAlives() {
         Intent i = new Intent();
         i.setClass(this, MqttService.class);
@@ -308,10 +271,7 @@ public class AlarmService extends Service implements MqttCallback
                 System.currentTimeMillis() + MQTT_KEEP_ALIVE,
                 MQTT_KEEP_ALIVE, pi);
     }
-    /**
-     * Cancels the Pending Intent
-     * in the alarm manager
-     */
+
     private void stopKeepAlives() {
         Intent i = new Intent();
         i.setClass(this, MqttService.class);
@@ -319,10 +279,7 @@ public class AlarmService extends Service implements MqttCallback
         PendingIntent pi = PendingIntent.getService(this, 0, i, 0);
         mAlarmManager.cancel(pi);
     }
-    /**
-     * Publishes a KeepALive to the topic
-     * in the broker
-     */
+
     private synchronized void keepAlive() {
         if(isConnected()) {
             try {
@@ -340,29 +297,19 @@ public class AlarmService extends Service implements MqttCallback
             }
         }
     }
-    /**
-     * Checkes the current connectivity
-     * and reconnects if it is required.
-     */
+
     private synchronized void reconnectIfNecessary() {
         if(mStarted && mClient == null) {
             connect();
         }
     }
-    /**
-     * Query's the NetworkInfo via ConnectivityManager
-     * to return the current connected state
-     * @return boolean true if we are connected false otherwise
-     */
+
     private boolean isNetworkAvailable() {
         NetworkInfo info = mConnectivityManager.getActiveNetworkInfo();
 
         return (info == null) ? false : info.isConnected();
     }
-    /**
-     * Verifies the client State with our local connected state
-     * @return true if its a match we are connected false if we aren't connected
-     */
+
     private boolean isConnected() {
         if(mStarted && mClient != null && !mClient.isConnected()) {
             Log.i(DEBUG_TAG,"Mismatch between what we think is connected and what is connected");
@@ -374,22 +321,14 @@ public class AlarmService extends Service implements MqttCallback
 
         return false;
     }
-    /**
-     * Receiver that listens for connectivity chanes
-     * via ConnectivityManager
-     */
+
     private final BroadcastReceiver mConnectivityReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.i(DEBUG_TAG,"Connectivity Changed...");
         }
     };
-    /**
-     * Sends a Keep Alive message to the specified topic
-    // * @see MQTT_KEEP_ALIVE_MESSAGE
-     //* @see MQTT_KEEP_ALIVE_TOPIC_FORMAT
-     * @return MqttDeliveryToken specified token you can choose to wait for completion
-     */
+
     private synchronized MqttDeliveryToken sendKeepAlive()
             throws MqttConnectivityException, MqttPersistenceException, MqttException {
         if(!isConnected())
@@ -407,11 +346,7 @@ public class AlarmService extends Service implements MqttCallback
 
         return mKeepAliveTopic.publish(message);
     }
-    /**
-     * Query's the AlarmManager to check if there is
-     * a keep alive currently scheduled
-     * @return true if there is currently one scheduled false otherwise
-     */
+
     private synchronized boolean hasScheduledKeepAlives() {
         Intent i = new Intent();
         i.setClass(this, MqttService.class);
@@ -572,11 +507,6 @@ public class AlarmService extends Service implements MqttCallback
     public void deliveryComplete(IMqttDeliveryToken token) {
 
     }
-
-    /**
-     * Publish Message Completion
-     */
-
 
     private class MqttConnectivityException extends Exception {
         private static final long serialVersionUID = -7385866796799469420L;
