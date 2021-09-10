@@ -39,7 +39,7 @@ public class Cctv_outdoorActivity extends AppCompatActivity {
 
 
         setDesktopMode(mWebView,true);
-        mWebView.loadUrl("http://192.168.0.29:81/stream"); // 웹뷰에 표시할 라즈베리파이 주소, 웹뷰 시작
+        mWebView.loadUrl("http://111.118.51.164:81/stream"); // 웹뷰에 표시할 라즈베리파이 주소, 웹뷰 시작
         //mWebView.setWebChromeClient(new WebChromeClient());
         //mWebView.setWebViewClient(new WebViewClientClass());
 

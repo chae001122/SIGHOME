@@ -35,7 +35,7 @@ public class EmMessageSendActivity extends Activity {
             @Override
             public void onClick(View view){
                 String emNum = "01047533589"; //일딴 윤세연 번호
-                String emText = "<<긴급 신고>>\n위치 : 숭실대학교 정보과학관\n저는 청각 장애인이며, 집에 낯선 사람이 침입했습니다.\nsend by SIGHOME";
+                String emText = "<<긴급 신고>>\n위치:숭실대학교 정보과학관\n저는 청각 장애인이며,집에 사람이 침입했습니다.\nsend by SIGHOME";
 
                 try{
                     SmsManager smsManager = SmsManager.getDefault();
